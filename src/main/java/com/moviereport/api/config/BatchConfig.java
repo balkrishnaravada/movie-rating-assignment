@@ -43,7 +43,7 @@ public class BatchConfig {
 	public FlatFileItemReader<Movies> reader()
 	{
 		FlatFileItemReader<Movies> reader=new FlatFileItemReader<>();
-		reader.setResource(new ClassPathResource("movies.csv"));
+		reader.setResource(new ClassPathResource("/movies.csv"));
 		reader.setLineMapper(getLineMapper());
 		reader.setLinesToSkip(1);
 		return reader;
@@ -53,7 +53,7 @@ public class BatchConfig {
 	public FlatFileItemReader<Ratings> reader2()
 	{
 		FlatFileItemReader<Ratings> reader2=new FlatFileItemReader<>();
-		reader2.setResource(new ClassPathResource("ratings.csv"));
+		reader2.setResource(new ClassPathResource("/ratings.csv"));
 		reader2.setLineMapper(getLineMapper2());
 		reader2.setLinesToSkip(1);
 		return reader2;
